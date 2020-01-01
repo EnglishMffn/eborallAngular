@@ -1,0 +1,10 @@
+<h1>Work</h1>
+<ul>
+  <a [routerLink]="['/work', project.fields.slug]" *ngFor="let project of projects" class="project">
+    <li>
+      <img src="{{project.fields.projectThumb.fields.file.url}}?fit=thumb&w=250&h=150&f=face">
+      <h2>{{ project.fields.projectName }}</h2>
+      <strong class="summary">{{project.fields.summary}}</strong>
+    </li>
+  </a>
+</ul>

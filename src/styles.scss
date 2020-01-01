@@ -1,0 +1,24 @@
+// Import Bootstrap Grid Only
+@import "../src/styles/grid/bootstrap-grid";
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+@at-root {
+  @-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
