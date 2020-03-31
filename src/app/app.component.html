@@ -1,12 +1,13 @@
 <div class="grid-wrapper container-fluid">
   <div class="row no-gutter">
-    <aside class="col-lg-7 col-sm-12">
+    <main [@fadeAnimation]="getState(o)" class="{{mainWidthClass}} col-sm-12">
+      <div class="container">
+        <app-navigation></app-navigation>
+        <router-outlet #o="outlet"></router-outlet>
+      </div>
+    </main>
+    <aside class="{{slideshowWidthClass}} col-sm-12">
       Slideshow Here
     </aside>
-    <main [@fadeAnimation]="getState(o)" class="col-lg-offset-7 col-lg-4 col-sm-12">
-      <nav><a [routerLink]="['']" routerLinkActive="active">Joseph Eborall</a><a [routerLink]="['/work']"
-          routerLinkActive="active">My Work</a><a [routerLink]="['/contact']" routerLinkActive="active">Contact</a></nav>
-      <router-outlet #o="outlet"></router-outlet>
-    </main>
   </div>
 </div>

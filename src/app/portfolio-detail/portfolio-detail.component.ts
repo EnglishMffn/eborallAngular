@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Entry } from 'contentful';
+import { MainWidthService } from '../main-width.service';
+
 
 @Component({
   selector: 'app-portfolio-detail',
@@ -15,6 +17,7 @@ export class PortfolioDetailComponent implements OnInit {
   constructor(
     private ContentfulS: ContentfulService,
     private route: ActivatedRoute,
+    private mainWidth: MainWidthService
   ) {}
 
   ngOnInit() {
@@ -25,6 +28,8 @@ export class PortfolioDetailComponent implements OnInit {
         )
       )
       .subscribe(project => (this.project = project));
+
+    this.mainWidth.updateWidth(6);
   }
 
 }

@@ -6,12 +6,15 @@ import { RouterModule, Routes } from '@angular/router';
 // Browser Animations
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// Routing
+// ROUTING
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+// SERVICES
 // Contentful Import
 import { ContentfulService } from './contentful.service';
+import { MainWidthService } from './main-width.service';
+
 // Markdown
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -20,6 +23,7 @@ import { PortfolioListComponent } from './portfolio-list/portfolio-list.componen
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -35,6 +39,7 @@ const routes: Routes = [
     PortfolioDetailComponent,
     HomePageComponent,
     ContactPageComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,8 @@ const routes: Routes = [
     MarkdownModule.forRoot(),
   ],
   providers: [
-    ContentfulService
+    ContentfulService,
+    MainWidthService
   ],
   bootstrap: [
     AppComponent

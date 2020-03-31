@@ -1,5 +1,7 @@
-// Import Bootstrap Grid Only
-@import "../src/styles/grid/bootstrap-grid";
+// Import Bootstrap Grid Only and Fonts
+@import
+'../src/styles/grid/bootstrap-grid',
+'../src/styles/fonts';
 
 body{
   padding: 0;
@@ -21,4 +23,41 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+// Font Styling
+html {
+  font-size: 16px;
+  font-family: 'Greycliff CF';
+}
+
+@media (max-width: 728px) {
+  html {
+    font-size: 3vw;
+  }
+}
+
+//Heading Sizes
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Greycliff CF';
+  font-weight: bold;
+  line-height: 1.35;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
