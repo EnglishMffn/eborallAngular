@@ -24,6 +24,7 @@ import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.co
 import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ButtonComponent } from './button/button.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -40,6 +41,7 @@ const routes: Routes = [
     HomePageComponent,
     ContactPageComponent,
     NavigationComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,

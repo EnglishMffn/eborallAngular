@@ -9,11 +9,11 @@ import { MainWidthService } from '../main-width.service';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private mainWidth: MainWidthService) {
-    mainWidth.updateWidth(8);
+  constructor(private mainWidthService: MainWidthService) {
   }
 
   ngOnInit() {
+    this.mainWidthService.updateWidth(4);
   }
 
 }

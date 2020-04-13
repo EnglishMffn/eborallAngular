@@ -14,16 +14,14 @@ export class PortfolioListComponent implements OnInit {
 
   constructor(
     private contentfulService: ContentfulService,
-    private mainWidth: MainWidthService
+    private mainWidthService: MainWidthService
     ) {}
 
   ngOnInit() {
     this.contentfulService
       .getProjects()
       .then(project => (this.projects = project));
-    console.log('Before ' + this.mainWidth.getWidths().slideshow);
-    this.mainWidth.updateWidth(6);
-    console.log('Now ' + this.mainWidth.getWidths().slideshow);
+    this.mainWidthService.updateWidth(6);
   }
 
 }

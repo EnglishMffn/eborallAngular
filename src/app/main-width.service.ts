@@ -6,29 +6,21 @@ import { Subject } from 'rxjs';
 })
 export class MainWidthService {
 
-  mainWidthClass: string;
-  slideshowWidthClass: string;
+  private mainWidthClass = new Subject<string>();
+  private slideshowWidthClass = new Subject<string>();
+
+  mainChanged$ = this.mainWidthClass.asObservable();
+  slideshowChanged$ = this.slideshowWidthClass.asObservable();
 
   constructor() {
-    this.mainWidthClass = 'col-lg-4';
-    this.slideshowWidthClass = 'col-lg-8';
   }
 
   updateWidth(mainWidthInput) {
-    this.mainWidthClass = 'col-lg-' + mainWidthInput;
+    this.mainWidthClass.next('col-lg-' + mainWidthInput);
     if (mainWidthInput === 12) {
-      this.slideshowWidthClass = 'hide';
+      this.slideshowWidthClass.next('hide-slideshow');
     } else {
-      this.slideshowWidthClass = 'col-lg-' + (12 - mainWidthInput);
+      this.slideshowWidthClass.next('col-lg-' + (12 - mainWidthInput));
     }
-
-    console.log(this.slideshowWidthClass);
-  }
-
-  getWidths() {
-    return {
-      main: this.mainWidthClass,
-      slideshow: this.slideshowWidthClass
-    };
   }
 }

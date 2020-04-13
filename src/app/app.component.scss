@@ -1,15 +1,36 @@
 .active {
-  color: #000 !important;
+  color: #000;
 }
 
 a {
   color: #ccc;
 }
 
-main {
-  transition: .25s ease-in-out;
+main,
+aside {
+  transition: .75s ease-in-out;
 }
 
 aside {
-  background: #F4F5F9;
+  background: #f4f5f9;
+}
+
+// Make Content Full-Height of Window
+.full-height {
+  min-height: 100vh;
+}
+
+.hide-slideshow {
+  animation: fadeOut .3s;
+}
+
+// Fade out and dissapear
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    width: 0;
+  }
 }

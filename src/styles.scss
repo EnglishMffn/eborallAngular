@@ -1,3 +1,7 @@
+// Import Global Variables
+@import
+'variables';
+
 // Import Bootstrap Grid Only and Fonts
 @import
 '../src/styles/grid/bootstrap-grid',
@@ -37,6 +41,12 @@ html {
   }
 }
 
+@media (min-width: 1600px) {
+  html {
+    font-size: 19px;
+  }
+}
+
 //Heading Sizes
 h1,
 h2,
@@ -60,4 +70,9 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
+}
+
+.container {
+  max-width: 980px !important;
+  padding: 25px !important;
 }

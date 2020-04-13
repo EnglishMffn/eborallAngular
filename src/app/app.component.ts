@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { fadeAnimation } from '../animations/fade.animation';
 import { Title } from '@angular/platform-browser';
 import { MainWidthService } from './main-width.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,18 +14,29 @@ import { MainWidthService } from './main-width.service';
 export class AppComponent {
 
   // Main and Slideshow Bootstrap Classes
-  mainWidthClass = '';
-  slideshowWidthClass = '';
+  mainWidthClass = 'col-lg-4';
+  slideshowWidthClass = 'col-lg-8';
+  subscription: Subscription;
 
-  public constructor(
+
+  constructor(
     private titleService: Title,
-    private mainWidth: MainWidthService
+    private widthService: MainWidthService
   ) {
-    // Get Widths from Service
-    this.mainWidthClass =  mainWidth.getWidths().main;
-    this.slideshowWidthClass = mainWidth.getWidths().slideshow;
 
+    // Listen for changes to main width
+    this.subscription = widthService.mainChanged$.subscribe(
+      mainWidth => {
+        this.mainWidthClass = mainWidth;
+      }
+    );
 
+    // Listen for changes to slideshow width
+    this.subscription = widthService.slideshowChanged$.subscribe(
+      slideshowWidth => {
+        this.slideshowWidthClass = slideshowWidth;
+      }
+    );
   }
 
   public getState(outlet) {
