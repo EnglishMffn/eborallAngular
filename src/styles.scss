@@ -16,13 +16,6 @@ body{
   @-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
 }
 
-html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
-  padding: 0;
-  margin: 0;
-}
-
 *,
 *::before,
 *::after {
@@ -33,6 +26,12 @@ html {
 html {
   font-size: 16px;
   font-family: 'Greycliff CF';
+  line-height: 1.35;
+  color: #575865;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  padding: 0;
+  margin: 0;
 }
 
 @media (max-width: 728px) {
@@ -44,6 +43,7 @@ html {
 @media (min-width: 1600px) {
   html {
     font-size: 19px;
+    line-height: 1.35;
   }
 }
 
@@ -57,22 +57,25 @@ h6 {
   font-family: 'Greycliff CF';
   font-weight: bold;
   line-height: 1.35;
+  color: $black;
 }
 
-h1,
-h2 {
+h1 {
   font-size: 3rem;
 }
 
-h3 {
+h2 {
   font-size: 2rem;
 }
 
-h4 {
+h3 {
   font-size: 1.5rem;
 }
 
-.container {
-  max-width: 980px !important;
-  padding: 25px !important;
+h4 {
+  font-size: 1 rem;
+}
+
+.img-fluid {
+  width: 100%;
 }

@@ -16,11 +16,12 @@ export class MainWidthService {
   }
 
   updateWidth(mainWidthInput) {
-    this.mainWidthClass.next('col-lg-' + mainWidthInput);
     if (mainWidthInput === 12) {
       this.slideshowWidthClass.next('hide-slideshow');
+      this.mainWidthClass.next('col-lg-' + mainWidthInput + ' full-article');
     } else {
-      this.slideshowWidthClass.next('col-lg-' + (12 - mainWidthInput));
+      this.slideshowWidthClass.next('col-lg-' + (12 - mainWidthInput) + ' show-slideshow');
+      this.mainWidthClass.next('col-lg-' + mainWidthInput);
     }
   }
 }

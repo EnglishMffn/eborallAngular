@@ -5,7 +5,6 @@ import { MainWidthService } from '../main-width.service';
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
-  providers: [MainWidthService]
 })
 export class HomePageComponent implements OnInit {
 

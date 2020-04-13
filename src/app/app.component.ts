@@ -3,13 +3,13 @@ import { fadeAnimation } from '../animations/fade.animation';
 import { Title } from '@angular/platform-browser';
 import { MainWidthService } from './main-width.service';
 import { Subscription } from 'rxjs';
+import { DeferLoadModule } from '@trademe/ng-defer-load';
 
 @Component({
   selector: 'app-root',
   animations: [fadeAnimation],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  providers: [MainWidthService]
 })
 export class AppComponent {
 

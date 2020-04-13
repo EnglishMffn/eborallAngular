@@ -21,16 +21,66 @@ aside {
 }
 
 .hide-slideshow {
-  animation: fadeOut .3s;
+  animation: fadeOut .75s ease-in-out;
+}
+
+.show-slideshow {
+  animation: fadeIn 3s ease-in-out;
 }
 
 // Fade out and dissapear
 @keyframes fadeOut {
   0% {
+    flex: 0 0 50%;
     opacity: 1;
   }
 
+
   100% {
-    width: 0;
+    flex: 0 0 0;
+    opacity: 0;
   }
+}
+
+// Fade out and dissapear
+@keyframes fadeIn {
+  0% {
+    opacity: inherit;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+aside {
+  .slideshow {
+    display: flex;
+    height: 100%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 50%;
+    transition: .75s ease-in-out;
+  }
+
+  .col-lg-8 > .slideshow {
+    width: 65% !important;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.container {
+  max-width: 980px;
+  padding: 50px 100px;
+  transition: .75s ease-in-out;
+}
+
+.full-article > .container {
+  max-width: 1200px;
 }
