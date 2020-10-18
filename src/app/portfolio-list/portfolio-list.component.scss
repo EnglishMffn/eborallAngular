@@ -2,15 +2,14 @@
 
 // Project List Components
 .project {
-  border-radius: 5px;
   display: block;
   margin-bottom: 15px;
-  padding: $global-padding;
   text-decoration: none;
 
   &:hover {
     & > img {
       box-shadow: 0 0 30px rgba($black, .12);
+      transform: scale(1.05);
     }
   }
 
@@ -21,11 +20,15 @@
   }
 
   img {
-    border-radius: 5px;
     margin-bottom: 15px;
     overflow: hidden;
     transition: .25s ease;
     width: 100%;
+  }
+
+  .project-details {
+    height: 75px;
+    padding-right: 18px;
   }
 
   h2 {

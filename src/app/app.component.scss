@@ -1,5 +1,7 @@
+@import '~src/variables';
+
 .active {
-  color: #000;
+  color: $black;
 }
 
 a {
@@ -53,34 +55,43 @@ aside {
   }
 }
 
-
-aside {
-  .slideshow {
-    display: flex;
-    height: 100%;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 50%;
-    transition: .75s ease-in-out;
-  }
-
-  .col-lg-8 > .slideshow {
-    width: 65% !important;
-  }
-
-  img {
-    width: 100%;
-  }
-}
-
 .container {
-  max-width: 980px;
-  padding: 50px 100px;
   transition: .75s ease-in-out;
 }
 
 .full-article > .container {
   max-width: 1200px;
+}
+
+.vert-elements {
+  position: fixed;
+  left: calc(5%);
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: -100;
+}
+
+.vert-line {
+  display: inline-block;
+  border-left: 1px solid $border-color;
+  height: 100%;
+  position: relative;
+  left: 50%;
+}
+
+.vert-name {
+  transform: rotate(90deg);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  background: #fff;
+  color: #c9c9c9;
+  display: block;
+  padding: 0 25px;
+}
+
+.layout-underline {
+  border-bottom: 1px solid $border-color;
 }

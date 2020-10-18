@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Entry } from 'contentful';
-import { MainWidthService } from '../main-width.service';
 import { Title } from '@angular/platform-browser';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
@@ -19,7 +18,6 @@ export class PortfolioDetailComponent implements OnInit {
   constructor(
     private ContentfulS: ContentfulService,
     private route: ActivatedRoute,
-    private mainWidth: MainWidthService,
     private titleService: Title,
   ) {}
 
@@ -31,8 +29,6 @@ export class PortfolioDetailComponent implements OnInit {
         )
       )
       .subscribe(project => (this.project = project));
-
-    this.mainWidth.updateWidth(12);
   }
 
 }

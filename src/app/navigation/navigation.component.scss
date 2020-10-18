@@ -2,11 +2,10 @@
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: $global-margin;
-  padding: $global-padding 0;
+  padding: $global-padding;
 
   .toggle {
     display: none;
@@ -15,16 +14,20 @@ nav {
   a {
     color: $light-gray;
     font-weight: normal;
+    font-size: 16px;
     transition: all .15s ease;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     &:hover {
       color: $black;
-      letter-spacing: 1px;
+      font-weight: bold;
     }
 
     &.active {
       color: $black;
+      font-weight: bold;
       padding-bottom: 5px;
       border-bottom: 2px solid $brand-primary;
     }
@@ -44,11 +47,17 @@ nav {
     list-style: none;
     justify-content: space-between;
     flex-direction: row;
+    align-items: center;
   }
 
   li {
-    padding: 0 $global-padding - 5;
+    padding: 0 $global-padding;
   }
+}
+
+.layout-underline {
+  border-bottom: 1px solid $border-color;
+  margin-bottom: $global-margin;
 }
 
 // // Mobile Styling

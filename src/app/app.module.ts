@@ -13,7 +13,6 @@ import { AppComponent } from './app.component';
 // SERVICES
 // Contentful Import
 import { ContentfulService } from './contentful.service';
-import { MainWidthService } from './main-width.service';
 
 // Markdown
 import { MarkdownModule } from 'ngx-markdown';
@@ -27,7 +26,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ButtonComponent } from './button/button.component';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent },
+  { path: '', redirectTo: '/work', pathMatch: 'full' },
   { path: 'work', component: PortfolioListComponent },
   { path: 'work/:slug', component: PortfolioDetailComponent },
   { path: 'contact', component: ContactPageComponent }
@@ -51,7 +50,6 @@ const routes: Routes = [
   ],
   providers: [
     ContentfulService,
-    MainWidthService
   ],
   bootstrap: [
     AppComponent
