@@ -20,15 +20,17 @@ aside {
 .back-toggle {
   color: black;
   position: sticky;
-  top: 0;
+  top: 30px;
   margin-left: -75px;
 }
 
-img {
-  transition: .25s ease;
+article {
+  img {
+    transition: .25s ease;
 
-  &:hover {
-    box-shadow: 0 0 30px rgba($black, .12);
-    transform: scale(1.05);
+    &:hover {
+      box-shadow: 0 0 30px rgba($black, .12);
+      transform: scale(1.05);
+    }
   }
 }

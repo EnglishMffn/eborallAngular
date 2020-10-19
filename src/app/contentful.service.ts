@@ -40,7 +40,7 @@ export class ContentfulService {
   }
 
   getProject(slug: string): Promise<Entry<any>> {
-    return this.getProjects({ "fields.slug": slug }).then(items => items[0]);
+    return this.getProjects({ 'fields.slug': slug }).then(items => items[0]);
   }
 
 }

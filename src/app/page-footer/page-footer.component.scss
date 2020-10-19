@@ -1,0 +1,12 @@
+@import '~src/variables';
+
+footer {
+  background: #070705;
+  color: #787780;
+  padding: $global-padding;
+  text-align: center;
+  height: 215px;
+  font-size: 14px;
+  z-index: -5;
+  position: relative;
+}

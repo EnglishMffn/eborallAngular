@@ -65,12 +65,13 @@ aside {
 
 .vert-elements {
   position: fixed;
-  left: calc(5%);
+  left: 10vw;
   top: 0;
   height: 100%;
   display: flex;
   align-items: center;
-  z-index: -100;
+  z-index: -1;
+  overflow: hidden;
 }
 
 .vert-line {
@@ -83,13 +84,14 @@ aside {
 
 .vert-name {
   transform: rotate(90deg);
+  transform-origin: center;
+  background: #fff;
+  padding: 0 25px;
   text-transform: uppercase;
   letter-spacing: 5px;
   text-align: center;
-  background: #fff;
-  color: #c9c9c9;
+  color: $border-color;
   display: block;
-  padding: 0 25px;
 }
 
 .layout-underline {

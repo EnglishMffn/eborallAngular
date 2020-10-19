@@ -24,6 +24,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ButtonComponent } from './button/button.component';
+import { PageFooterComponent } from './page-footer/page-footer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/work', pathMatch: 'full' },
@@ -41,6 +42,7 @@ const routes: Routes = [
     ContactPageComponent,
     NavigationComponent,
     ButtonComponent,
+    PageFooterComponent,
   ],
   imports: [
     BrowserModule,
