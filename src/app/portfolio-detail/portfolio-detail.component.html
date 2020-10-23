@@ -8,7 +8,6 @@
       <div class="summary">{{project.fields.summary}}</div>
     </div>
 
-
     <a *ngIf="project.fields.mainMedia" href="{{project.fields.mainMedia.fields.file.url}}"><img src="{{project.fields.mainMedia.fields.file.url}}?&w=1180&h=750" alt="{{project.fields.projectThumb.fields.description}}" class="img-fluid" /></a>
   </section>
 
@@ -17,23 +16,23 @@
       <markdown>{{project.fields.body}}</markdown>
       <section class="row">
         <div class="col-md-6">
-          <dl>
+          <dl *ngIf="project.fields.client">
             <dt>Client</dt>
             <dd>{{project.fields.client}}</dd>
             </dl>
-          <dl>
+          <dl *ngIf="project.fields.typeOfClient">
             <dt>Sector</dt>
             <dd>{{project.fields.typeOfClient}}</dd>
             </dl>
           </div>
         <div class="col-md-6">
-          <dl>
+          <dl *ngIf="project.fields.typeOfWork">
             <dt>Discipline</dt>
             <dd>{{project.fields.typeOfWork}}</dd>
             </dl>
-          <dl>
+          <dl *ngIf="project.fields.typeOfWork">
             <dt>Tools Used</dt>
-            <dd></dd>
+            <dd>{{project.fields.tools}}</dd>
             </dl>
           </div>
         </section>
