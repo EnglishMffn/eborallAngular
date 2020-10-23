@@ -22,15 +22,9 @@ aside {
   position: sticky;
   top: 30px;
   margin-left: -75px;
-}
+  transition: 1s ease;
 
-article {
-  img {
-    transition: .25s ease;
-
-    &:hover {
-      box-shadow: 0 0 30px rgba($black, .12);
-      transform: scale(1.05);
-    }
+  img:hover {
+    transform: scale(1.1) translateX(-5px);
   }
 }

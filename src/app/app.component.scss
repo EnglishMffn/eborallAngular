@@ -8,13 +8,9 @@ a {
   color: #ccc;
 }
 
-main,
-aside {
+main {
   transition: .75s ease-in-out;
-}
-
-aside {
-  background: #f4f5f9;
+  display: block;
 }
 
 // Make Content Full-Height of Window
@@ -53,10 +49,6 @@ aside {
   100% {
     opacity: 1;
   }
-}
-
-.container {
-  transition: .75s ease-in-out;
 }
 
 .full-article > .container {

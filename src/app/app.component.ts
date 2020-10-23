@@ -4,7 +4,9 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
-  animations: [fadeAnimation],
+  animations: [
+    fadeAnimation
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

@@ -28,7 +28,7 @@ export class PortfolioDetailComponent implements OnInit {
           this.ContentfulS.getProject(params.get('slug'))
         )
       )
-      .subscribe(project => (this.project = project));
+      .subscribe(project => (this.project = project, this.titleService.setTitle(project.fields.projectName + ' | EBORALL')));
   }
 
 }

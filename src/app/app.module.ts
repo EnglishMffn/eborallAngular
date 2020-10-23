@@ -7,7 +7,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // ROUTING
-// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // SERVICES
@@ -27,7 +26,7 @@ import { ButtonComponent } from './button/button.component';
 import { PageFooterComponent } from './page-footer/page-footer.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/work', pathMatch: 'full' },
+  { path: '', component: HomePageComponent },
   { path: 'work', component: PortfolioListComponent },
   { path: 'work/:slug', component: PortfolioDetailComponent },
   { path: 'contact', component: ContactPageComponent }
