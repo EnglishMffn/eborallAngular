@@ -13,7 +13,7 @@ export const fadeAnimation =
       query(':enter, :leave', [
         style({
           opacity: 0,
-          position: 'absolute',
+          // position: 'absolute',
           transform: 'translateY(15px)',
         })
       ]),
