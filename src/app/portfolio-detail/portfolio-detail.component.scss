@@ -22,9 +22,13 @@ aside {
   position: sticky;
   top: 30px;
   margin-left: -75px;
-  transition: 1s ease;
+  transition: 1s cubic-bezier(.4, .0, .2, 1);
 
   img:hover {
-    transform: scale(1.1) translateX(-5px);
+    transform: scale(1.25);
   }
+}
+
+article {
+  margin-top: -80px;
 }
