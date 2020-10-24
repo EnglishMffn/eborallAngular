@@ -22,13 +22,14 @@ aside {
   color: black;
   position: sticky;
   top: 30px;
-  transition: 1s cubic-bezier(.4, .0, .2, 1);
+  transition: 1s $global-ease;
 
-  img:hover {
+  &:hover {
     transform: scale(1.25);
   }
 }
 
+// Back button location on larger screens
 @include media-breakpoint-up(md) {
   .back-toggle {
     margin-left: -75px;

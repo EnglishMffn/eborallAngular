@@ -9,4 +9,10 @@ footer {
   font-size: 14px;
   z-index: -5;
   position: relative;
+
+  a {
+    z-index: 25;
+    padding: 25px;
+    display: block;
+  }
 }
