@@ -5,7 +5,8 @@
 // Import Bootstrap Grid Only and Fonts
 @import
 '../src/styles/grid/bootstrap-grid',
-'../src/styles/fonts';
+'../src/styles/fonts',
+'../src/styles/grid/breakpoints';
 
 body {
   margin: 0;
@@ -34,12 +35,7 @@ html {
   margin: 0;
 }
 
-@media (max-width: 728px) {
-  html {
-    font-size: 16px;
-  }
-}
-
+// Larger Font for XL screens
 @media (min-width: 1600px) {
   html {
     font-size: 19px;

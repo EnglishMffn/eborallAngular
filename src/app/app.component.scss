@@ -1,5 +1,8 @@
 @import '~src/variables';
 
+// Bootstrap Breakpoints
+@import '../styles/grid/breakpoints';
+
 .active {
   color: $black;
 }
@@ -57,13 +60,14 @@ main {
 
 .vert-elements {
   position: fixed;
-  left: 10vw;
+  left: 7%;
   top: 0;
   height: 100%;
   display: flex;
   align-items: center;
   z-index: -1;
-  overflow: hidden;
+  overflow: visible;
+  margin: 0;
 }
 
 .vert-line {
@@ -72,6 +76,7 @@ main {
   height: 100%;
   position: relative;
   left: 50%;
+  margin: 0;
 }
 
 .vert-name {
@@ -88,4 +93,10 @@ main {
 
 .layout-underline {
   border-bottom: 1px solid $border-color;
+}
+
+@include media-breakpoint-down(lg) {
+  .vert-elements {
+    display: none;
+  }
 }
