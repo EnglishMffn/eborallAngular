@@ -1,4 +1,5 @@
 @import '~src/variables';
+@import '~src/styles/grid/breakpoints';
 
 // Project List Components
 .project {
@@ -51,22 +52,27 @@
 
   // Hide description
   strong {
-    display: none;
+
     line-height: 18px;
     font-weight: normal;
     color: $gray;
   }
 
-  // On hover, hide h2 show strong
-  &:hover {
-    h2 {
+  @include media-breakpoint-up(md) {
+    strong {
       display: none;
     }
 
-    strong {
-      display: block;
+    // On hover, hide h2 show strong
+    &:hover {
+      h2 {
+        display: none;
+      }
+
+      strong {
+        display: block;
+      }
     }
   }
-
 
 }
