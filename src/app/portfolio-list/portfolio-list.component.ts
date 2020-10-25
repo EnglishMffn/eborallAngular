@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
-import { FilterlistComponent } from '../filterlist';
 import { Entry } from 'contentful';
 import { Title } from '@angular/platform-browser';
 import {trigger, transition, style, animate, query, stagger, keyframes} from '@angular/animations';
