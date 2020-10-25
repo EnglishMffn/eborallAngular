@@ -2,7 +2,7 @@
 <div class="row" [@photosAnimation]="projects.length">
   <div class="col-sm-12 col-md-4 h-100" *ngFor="let project of projects|projectfilter:SearchFilter" >
     <a [routerLink]="['/work', project.fields.slug]" class="project">
-      <img src="{{project.fields.projectThumb.fields.file.url}}?fm=jpg&fl=progressive&fit=thumb&w=350&h=200&f=face">
+      <img src="{{project.fields.projectThumb.fields.file.url}}?fm=jpg&fl=progressive&fit=thumb&w=350&h=200&f=face" alt="{{ project.fields.projectName }} Thumbnail">
       <div class="project-details">
         <h2>{{ project.fields.projectName }}</h2>
         <strong class="summary">{{project.fields.summary}}</strong>
