@@ -28,6 +28,7 @@ html {
   font-size: 16px;
   font-family: 'Roboto';
   line-height: 1.35;
+  letter-spacing: .5;
   color: #575865;
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
@@ -51,25 +52,28 @@ h4,
 h5,
 h6 {
   font-family: 'Roboto';
-  font-weight: bold;
   line-height: 1.35;
   color: $black;
 }
 
 h1 {
   font-size: 3rem;
+  letter-spacing: -1.5;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.875rem;
+  letter-spacing: -.5;
 }
 
 h3 {
   font-size: 1.5rem;
+  letter-spacing: 0;
 }
 
 h4 {
-  font-size: 1 rem;
+  font-size: 1rem;
+  letter-spacing: .25;
 }
 
 .img-fluid {

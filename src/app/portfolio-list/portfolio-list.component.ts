@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
+import { FilterlistComponent } from '../filterlist';
 import { Entry } from 'contentful';
 import { Title } from '@angular/platform-browser';
 import {trigger, transition, style, animate, query, stagger, keyframes} from '@angular/animations';
@@ -24,7 +25,7 @@ import {trigger, transition, style, animate, query, stagger, keyframes} from '@a
   ]
 })
 export class PortfolioListComponent implements OnInit {
-
+  SearchFilter = '';
   projects: Entry<any>[];
 
   constructor(
@@ -34,10 +35,46 @@ export class PortfolioListComponent implements OnInit {
       // Set Page Title
       this.titleService.setTitle('My Work | Joseph Eborall');
     }
+
   ngOnInit() {
     this.contentfulService
       .getProjects()
       .then(project => (this.projects = project));
+  }
+
+  public updateFilter(newFilter: string) {
+
+    if (newFilter === 'All') {
+      this.SearchFilter = '';
+    } else {
+      this.SearchFilter = newFilter;
+    }
+  }
+
+
+  // Split Filters
+  public processFilters(projectData) {
+    // Filter Project Types into Array
+    const rawArray = projectData.filter(project => project.fields.typeOfWork).map(project => project.fields.typeOfWork);
+    const splitArray = [];
+
+    // Loop through filters
+    for (const item in rawArray) {
+      if (rawArray.hasOwnProperty(item)) {
+        const splits = rawArray[item];
+
+        // Loop through Individual Labels
+        for (const split in splits) {
+          if (splits.hasOwnProperty(split)){
+            splitArray.push(splits[split]);
+          }
+        }
+      }
+    }
+    const uniqueFilters = [...new Set(splitArray.sort())];
+    uniqueFilters.unshift('All');
+
+    return uniqueFilters;
   }
 
   public getState(outlet) {

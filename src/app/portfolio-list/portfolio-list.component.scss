@@ -36,6 +36,13 @@
     line-height: 18px;
     color: $black;
     margin: 0;
+
+    span {
+      font-size: 60%;
+      color: $gray;
+      font-weight: normal;
+      align-self: middle;
+    }
   }
 
   li {

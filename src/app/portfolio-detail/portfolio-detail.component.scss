@@ -18,14 +18,24 @@ aside {
   }
 }
 
+dl {
+  dt {
+    font-weight: bold;
+    color: $black;
+  }
+  dd {
+    margin-left: 0;
+  }
+}
+
 .back-toggle {
   color: black;
-  position: sticky;
   top: 30px;
-  transition: 1s $global-ease;
+  opacity: .5;
 
   &:hover {
     transform: scale(1.25);
+    opacity: 1;
   }
 }
 
@@ -33,9 +43,29 @@ aside {
 @include media-breakpoint-up(md) {
   .back-toggle {
     margin-left: -75px;
+    position: sticky;
   }
 
   article {
     margin-top: -80px;
+  }
+
+}
+
+
+@include media-breakpoint-down(md) {
+  .project-head {
+    display: block;
+    margin-bottom: $global-margin;
+
+    h1 {
+      margin-bottom: $global-margin / 2;
+    }
+  }
+
+  aside {
+    ul {
+      padding-left: 0;
+    }
   }
 }
