@@ -122,6 +122,7 @@
           _classCallCheck(this, FilterlistComponent);
 
           this.newItemEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+          this.selectedFilter = 'All';
         }
 
         _createClass(FilterlistComponent, [{

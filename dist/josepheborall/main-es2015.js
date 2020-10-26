@@ -54,6 +54,7 @@ function FilterlistComponent_li_2_Template(rf, ctx) { if (rf & 1) {
 class FilterlistComponent {
     constructor() {
         this.newItemEvent = new _angular_core__WEBPACK_IMPORTED_MODULE_0__["EventEmitter"]();
+        this.selectedFilter = 'All';
     }
     onSelect(link) {
         this.selectedFilter = link;

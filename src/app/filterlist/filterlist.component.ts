@@ -9,7 +9,7 @@ export class FilterlistComponent implements OnInit {
   @Input() PostData: object;
   @Output() newItemEvent = new EventEmitter<string>();
   filterList: string[];
-  selectedFilter: string;
+  selectedFilter = 'All';
 
   onSelect(link: string) {
     this.selectedFilter = link;
