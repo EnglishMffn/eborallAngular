@@ -94,6 +94,7 @@ main {
 .layout-underline {
   border-bottom: 1px solid $border-color;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 // XL screens show name
@@ -105,6 +106,11 @@ main {
 
 // Hide Vert Line
 @media (max-width: 1300px) {
+=======
+}
+
+@include media-breakpoint-down(lg) {
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
 =======
 }
 

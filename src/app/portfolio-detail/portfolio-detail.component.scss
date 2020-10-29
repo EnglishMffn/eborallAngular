@@ -3,6 +3,7 @@
 
 .project-head {
 <<<<<<< HEAD
+<<<<<<< HEAD
   align-items: baseline;
   display: flex;
   justify-content: space-between;
@@ -16,12 +17,17 @@ article {
   img {
     @include image-border;
 =======
+=======
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 
   .headline {
     font-size: 34px;
+<<<<<<< HEAD
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
+=======
 >>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
   }
 }
@@ -33,6 +39,7 @@ aside {
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 .project-tags {
   column-count: 2;
@@ -49,11 +56,16 @@ dl {
   }
 
 =======
+=======
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
 dl {
   dt {
     font-weight: bold;
     color: $black;
   }
+<<<<<<< HEAD
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
+=======
 >>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
   dd {
     margin-left: 0;
@@ -61,6 +73,7 @@ dl {
 }
 
 .back-toggle {
+<<<<<<< HEAD
 <<<<<<< HEAD
   color: $black;
   opacity: .5;
@@ -70,6 +83,8 @@ dl {
     opacity: 1;
     transform: scale(1.25);
 =======
+=======
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
   color: black;
   top: 30px;
   opacity: .5;
@@ -77,6 +92,9 @@ dl {
   &:hover {
     transform: scale(1.25);
     opacity: 1;
+<<<<<<< HEAD
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
+=======
 >>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
   }
 }
@@ -95,6 +113,10 @@ dl {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
 =======
 
 >>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb

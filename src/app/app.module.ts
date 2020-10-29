@@ -26,7 +26,11 @@ import { ButtonComponent } from './button/button.component';
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { ProjectfilterPipe } from './projectfilter.pipe';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { FilterListComponent } from './filter-list/filter-list.component';
+=======
+import { FilterlistComponent } from './filterlist/filterlist.component';
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
 =======
 import { FilterlistComponent } from './filterlist/filterlist.component';
 >>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
@@ -50,7 +54,11 @@ const routes: Routes = [
     PageFooterComponent,
     ProjectfilterPipe,
 <<<<<<< HEAD
+<<<<<<< HEAD
     FilterListComponent,
+=======
+    FilterlistComponent,
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
 =======
     FilterlistComponent,
 >>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
