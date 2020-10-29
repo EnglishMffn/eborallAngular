@@ -11,11 +11,11 @@
       <a *ngIf="project.fields.mainMedia" href="{{project.fields.mainMedia.fields.file.url}}"><img src="{{project.fields.mainMedia.fields.file.url}}?&fm=jpg&fl=progressive&w=1180&h=750" alt="{{project.fields.projectThumb.fields.description}}" class="img-fluid" /></a>
     </section>
 
-    <section class="row">
+    <section class="row col-12">
       <main [ngClass]="{'col-lg-6' : project.fields.media}">
         <markdown>{{project.fields.body}}</markdown>
         <section class="row">
-          <div class="col-md-6">
+          <div class="project-tags">
             <dl *ngIf="project.fields.client">
               <dt>Client</dt>
               <dd>{{project.fields.client}}</dd>
@@ -24,15 +24,13 @@
               <dt>Sector</dt>
               <dd>{{project.fields.typeOfClient}}</dd>
               </dl>
-            </div>
-          <div class="col-md-6">
             <dl *ngIf="project.fields.typeOfWork">
               <dt>Discipline</dt>
-              <dd>{{project.fields.typeOfWork}}</dd>
+              <dd>{{project.fields.typeOfWork.join(', ')}}</dd>
               </dl>
             <dl *ngIf="project.fields.toolsUsed">
               <dt>Tools Used</dt>
-              <dd>{{project.fields.toolsUsed}}</dd>
+              <dd>{{project.fields.toolsUsed.join(', ')}}</dd>
               </dl>
             </div>
           </section>
@@ -40,7 +38,7 @@
       <aside *ngIf="project.fields.media" class="col-md-6 col-sm-12">
         <ul>
           <li *ngFor="let image of project.fields.media">
-            <a href="{{image.fields.file.url}}"><img src="{{image.fields.file.url}}?fl=progressive&w=570" class="img-fluid"></a>
+            <a href="{{image.fields.file.url}}"><img src="{{image.fields.file.url}}?fl=progressive&w=570"></a>
           </li>
         </ul>
       </aside>

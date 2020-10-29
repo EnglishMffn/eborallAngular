@@ -25,7 +25,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { ButtonComponent } from './button/button.component';
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { ProjectfilterPipe } from './projectfilter.pipe';
-import { FilterlistComponent } from './filterlist/filterlist.component';
+import { FilterListComponent } from './filter-list/filter-list.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -45,7 +45,7 @@ const routes: Routes = [
     ButtonComponent,
     PageFooterComponent,
     ProjectfilterPipe,
-    FilterlistComponent,
+    FilterListComponent,
   ],
   imports: [
     BrowserModule,

@@ -95,7 +95,15 @@ main {
   border-bottom: 1px solid $border-color;
 }
 
-@include media-breakpoint-down(lg) {
+// XL screens show name
+@media (max-width: 1600px) {
+  .vert-name {
+    display: none;
+  }
+}
+
+// Hide Vert Line
+@media (max-width: 1300px) {
   .vert-elements {
     display: none;
   }

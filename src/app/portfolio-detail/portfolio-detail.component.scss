@@ -2,9 +2,9 @@
 @import '~src/styles/grid/breakpoints';
 
 .project-head {
+  align-items: baseline;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
 
   .headline {
     font-size: 34px;
@@ -16,26 +16,39 @@ aside {
     list-style: none;
     margin-bottom: 20px;
   }
+
+  img {
+    border: 1px solid rgba(0, 0, 0, .05);
+  }
+}
+
+.project-tags {
+  column-count: 2;
 }
 
 dl {
+  margin: 0;
+  padding: $global-padding / 2;
+  page-break-inside: avoid;
+
   dt {
-    font-weight: bold;
     color: $black;
+    font-weight: bold;
   }
+
   dd {
     margin-left: 0;
   }
 }
 
 .back-toggle {
-  color: black;
-  top: 30px;
+  color: $black;
   opacity: .5;
+  top: 30px;
 
   &:hover {
-    transform: scale(1.25);
     opacity: 1;
+    transform: scale(1.25);
   }
 }
 
@@ -51,7 +64,6 @@ dl {
   }
 
 }
-
 
 @include media-breakpoint-down(md) {
   .project-head {

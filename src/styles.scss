@@ -44,6 +44,14 @@ html {
   }
 }
 
+a {
+  color: $black;
+
+  &:hover {
+    color: $brand-primary;
+  }
+}
+
 //Heading Sizes
 h1,
 h2,

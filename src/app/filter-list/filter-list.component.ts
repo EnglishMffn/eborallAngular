@@ -1,14 +1,14 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-filterlist',
-  templateUrl: './filterlist.component.html',
-  styleUrls: ['./filterlist.component.scss']
+  selector: 'app-filter-list',
+  templateUrl: './filter-list.component.html',
+  styleUrls: ['./filter-list.component.scss']
 })
-export class FilterlistComponent implements OnInit {
+export class FilterListComponent implements OnInit {
   @Input() PostData: object;
   @Output() newItemEvent = new EventEmitter<string>();
-  filterList: string[];
+  filterlist: string[];
   selectedFilter = 'All';
 
   onSelect(link: string) {
