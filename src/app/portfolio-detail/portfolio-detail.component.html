@@ -11,11 +11,19 @@
       <a *ngIf="project.fields.mainMedia" href="{{project.fields.mainMedia.fields.file.url}}"><img src="{{project.fields.mainMedia.fields.file.url}}?&fm=jpg&fl=progressive&w=1180&h=750" alt="{{project.fields.projectThumb.fields.description}}" class="img-fluid" /></a>
     </section>
 
+<<<<<<< HEAD
     <section class="row col-12">
       <main [ngClass]="{'col-lg-6' : project.fields.media}">
         <markdown>{{project.fields.body}}</markdown>
         <section class="row">
           <div class="project-tags">
+=======
+    <section class="row">
+      <main [ngClass]="{'col-lg-6' : project.fields.media}">
+        <markdown>{{project.fields.body}}</markdown>
+        <section class="row">
+          <div class="col-md-6">
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
             <dl *ngIf="project.fields.client">
               <dt>Client</dt>
               <dd>{{project.fields.client}}</dd>
@@ -24,6 +32,7 @@
               <dt>Sector</dt>
               <dd>{{project.fields.typeOfClient}}</dd>
               </dl>
+<<<<<<< HEAD
             <dl *ngIf="project.fields.typeOfWork">
               <dt>Discipline</dt>
               <dd>{{project.fields.typeOfWork.join(', ')}}</dd>
@@ -31,6 +40,17 @@
             <dl *ngIf="project.fields.toolsUsed">
               <dt>Tools Used</dt>
               <dd>{{project.fields.toolsUsed.join(', ')}}</dd>
+=======
+            </div>
+          <div class="col-md-6">
+            <dl *ngIf="project.fields.typeOfWork">
+              <dt>Discipline</dt>
+              <dd>{{project.fields.typeOfWork}}</dd>
+              </dl>
+            <dl *ngIf="project.fields.toolsUsed">
+              <dt>Tools Used</dt>
+              <dd>{{project.fields.toolsUsed}}</dd>
+>>>>>>> b5342c90fc48d75551b74e9d73a53c9d514970bb
               </dl>
             </div>
           </section>
