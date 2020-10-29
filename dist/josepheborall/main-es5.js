@@ -535,7 +535,7 @@
         selectors: [["app-portfolio-detail"]],
         decls: 22,
         vars: 14,
-        consts: [[1, "back-toggle", 3, "routerLink"], ["src", "../../assets/img/arrow-left.svg", "alt", "Back"], [1, "row"], [1, "col-md-12"], [1, "project-head"], [1, "headline"], [1, "summary"], [3, "href", 4, "ngIf"], [1, "row", "col-12"], [3, "ngClass"], [1, "project-tags"], [4, "ngIf"], ["class", "col-md-6 col-sm-12", 4, "ngIf"], [3, "href"], [1, "img-fluid", 3, "src", "alt"], [1, "col-md-6", "col-sm-12"], [4, "ngFor", "ngForOf"], [3, "src"]],
+        consts: [[1, "back-toggle", 3, "routerLink"], ["src", "../../assets/img/arrow-left.svg", "alt", "Back"], [1, "row"], [1, "col-md-12"], [1, "project-head"], [1, "headline"], [1, "summary"], [3, "href", 4, "ngIf"], [1, "row", "col-12"], [3, "ngClass"], [1, "project-tags"], [4, "ngIf"], ["class", "col-md-6 col-sm-12", 4, "ngIf"], [3, "href"], [1, "img-fluid", 3, "src", "alt"], [1, "col-md-6", "col-sm-12"], [4, "ngFor", "ngForOf"], [1, "img-fluid", 3, "src"]],
         template: function PortfolioDetailComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "a", 0);

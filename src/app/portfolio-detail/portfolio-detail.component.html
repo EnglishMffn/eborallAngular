@@ -38,7 +38,7 @@
       <aside *ngIf="project.fields.media" class="col-md-6 col-sm-12">
         <ul>
           <li *ngFor="let image of project.fields.media">
-            <a href="{{image.fields.file.url}}"><img src="{{image.fields.file.url}}?fl=progressive&w=570"></a>
+            <a href="{{image.fields.file.url}}"><img src="{{image.fields.file.url}}?fl=progressive&w=570" class="img-fluid"></a>
           </li>
         </ul>
       </aside>
