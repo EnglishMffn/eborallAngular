@@ -25,6 +25,7 @@
     overflow: hidden;
     transition: .25s ease;
     width: 100%;
+    @include image-border;
   }
 
   .project-details {

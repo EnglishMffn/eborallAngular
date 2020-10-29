@@ -11,14 +11,16 @@
   }
 }
 
+article {
+  img {
+    @include image-border;
+  }
+}
+
 aside {
   li {
     list-style: none;
     margin-bottom: 20px;
-  }
-
-  img {
-    border: 1px solid rgba(0, 0, 0, .05);
   }
 }
 
