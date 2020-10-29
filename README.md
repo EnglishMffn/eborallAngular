@@ -1,5 +1,5 @@
 # Eborall.net Project
-Here is the code for my portfolio website, built on Angular.
+Here is the code for my portfolio website, built on Angular. Feel free to look around and see how I work.
 
 ## Development server
 
