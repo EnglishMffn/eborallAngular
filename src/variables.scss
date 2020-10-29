@@ -1,0 +1,29 @@
+// Global Styling Variables
+$brand-primary: #e90039;
+
+
+// Calculate Medium Emphasis Color
+@function medium-emphasis($input-color) {
+  @return rgba($input-color, .12);
+}
+
+// Calculate Low Emphasis Color
+@function low-emphasis($input-color) {
+  @return rgba($input-color, .05);
+}
+
+// Color Neutrals
+$black: #000;
+$white: #fff;
+$gray: #787780;
+$light-gray: #8d8e93;
+
+$border-color: #c9c9c9;
+
+// Layout variables for consistency
+$global-padding: 30px;
+$global-margin: 30px;
+$global-radius: 5px;
+
+// Ease Transition
+$global-ease: cubic-bezier(.4, 0, .2, 1);

@@ -1,0 +1,5 @@
+<nav>
+  <ul>
+    <li *ngFor="let filter of PostData" (click)="onSelect(filter)" [class.selected]="filter === selectedFilter">{{filter}}</li>
+  </ul>
+</nav>

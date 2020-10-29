@@ -1,9 +1,13 @@
-main {
-  p {
-    color: #575865;
-    font-family: "Greycliff CF";
-    font-size: 19px;
-    line-height: 27px;
+@import '~src/variables';
+@import '~src/styles/grid/breakpoints';
+
+.project-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+  .headline {
+    font-size: 34px;
   }
 }
 
@@ -11,5 +15,57 @@ aside {
   li {
     list-style: none;
     margin-bottom: 20px;
+  }
+}
+
+dl {
+  dt {
+    font-weight: bold;
+    color: $black;
+  }
+  dd {
+    margin-left: 0;
+  }
+}
+
+.back-toggle {
+  color: black;
+  top: 30px;
+  opacity: .5;
+
+  &:hover {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}
+
+// Back button location on larger screens
+@include media-breakpoint-up(md) {
+  .back-toggle {
+    margin-left: -75px;
+    position: sticky;
+  }
+
+  article {
+    margin-top: -80px;
+  }
+
+}
+
+
+@include media-breakpoint-down(md) {
+  .project-head {
+    display: block;
+    margin-bottom: $global-margin;
+
+    h1 {
+      margin-bottom: $global-margin / 2;
+    }
+  }
+
+  aside {
+    ul {
+      padding-left: 0;
+    }
   }
 }

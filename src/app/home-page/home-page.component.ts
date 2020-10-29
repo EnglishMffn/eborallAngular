@@ -1,19 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import { MainWidthService } from '../main-width.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
-  providers: [MainWidthService]
 })
-export class HomePageComponent implements OnInit {
-
-  constructor(private mainWidth: MainWidthService) {
-    mainWidth.updateWidth(8);
+export class HomePageComponent {
+  constructor(
+    private titleService: Title,
+  ) {
+    // Set Page Title
+    this.titleService.setTitle('Joseph Eborall');
   }
-
-  ngOnInit() {
-  }
-
 }

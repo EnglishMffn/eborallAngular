@@ -1,13 +1,18 @@
 <div class="grid-wrapper container-fluid">
-  <div class="row no-gutter">
-    <main [@fadeAnimation]="getState(o)" class="{{mainWidthClass}} col-sm-12">
+  <app-navigation class="layout-underline"></app-navigation>
+  <div class="row no-gutter full-height">
+    <main [@fadeAnimation]="getState(o)" class="col-12">
       <div class="container">
-        <app-navigation></app-navigation>
         <router-outlet #o="outlet"></router-outlet>
       </div>
     </main>
-    <aside class="{{slideshowWidthClass}} col-sm-12">
-      Slideshow Here
-    </aside>
   </div>
 </div>
+
+<app-page-footer></app-page-footer>
+
+
+<figure class="vert-elements">
+  <figure class="vert-line"></figure>
+  <span class="vert-name">Joseph Eborall</span>
+</figure>

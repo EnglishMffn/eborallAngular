@@ -1,5 +1,10 @@
+@import '~src/variables';
+
+// Bootstrap Breakpoints
+@import '../styles/grid/breakpoints';
+
 .active {
-  color: #000 !important;
+  color: $black;
 }
 
 a {
@@ -7,9 +12,91 @@ a {
 }
 
 main {
-  transition: .25s ease-in-out;
+  transition: .75s ease-in-out;
+  display: block;
 }
 
-aside {
-  background: #F4F5F9;
+// Make Content Full-Height of Window
+.full-height {
+  min-height: 70vh;
+}
+
+.hide-slideshow {
+  animation: fadeOut .75s ease-in-out;
+}
+
+.show-slideshow {
+  animation: fadeIn 3s ease-in-out;
+}
+
+// Fade out and dissapear
+@keyframes fadeOut {
+  0% {
+    flex: 0 0 50%;
+    opacity: 1;
+  }
+
+
+  100% {
+    flex: 0 0 0;
+    opacity: 0;
+  }
+}
+
+// Fade out and dissapear
+@keyframes fadeIn {
+  0% {
+    opacity: inherit;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.full-article > .container {
+  max-width: 1200px;
+}
+
+.vert-elements {
+  position: fixed;
+  left: 7%;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  overflow: visible;
+  margin: 0;
+}
+
+.vert-line {
+  display: inline-block;
+  border-left: 1px solid $border-color;
+  height: 100%;
+  position: relative;
+  left: 50%;
+  margin: 0;
+}
+
+.vert-name {
+  transform: rotate(90deg);
+  transform-origin: center;
+  background: #fff;
+  padding: 0 25px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  color: $border-color;
+  display: block;
+}
+
+.layout-underline {
+  border-bottom: 1px solid $border-color;
+}
+
+@include media-breakpoint-down(lg) {
+  .vert-elements {
+    display: none;
+  }
 }

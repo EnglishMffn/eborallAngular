@@ -1,22 +1,20 @@
+// Import Global Variables
+@import
+'variables';
+
 // Import Bootstrap Grid Only and Fonts
 @import
 '../src/styles/grid/bootstrap-grid',
-'../src/styles/fonts';
+'../src/styles/fonts',
+'../src/styles/grid/breakpoints';
 
-body{
-  padding: 0;
+body {
   margin: 0;
+  padding: 0;
 }
 
 @at-root {
   @-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
-}
-
-html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
-  padding: 0;
-  margin: 0;
 }
 
 *,
@@ -28,12 +26,21 @@ html {
 // Font Styling
 html {
   font-size: 16px;
-  font-family: 'Greycliff CF';
+  font-family: 'Roboto';
+  line-height: 1.35;
+  letter-spacing: .5;
+  color: #575865;
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+  padding: 0;
+  margin: 0;
 }
 
-@media (max-width: 728px) {
+// Larger Font for XL screens
+@media (min-width: 1600px) {
   html {
-    font-size: 3vw;
+    font-size: 19px;
+    line-height: 1.35;
   }
 }
 
@@ -44,20 +51,31 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Greycliff CF';
-  font-weight: bold;
+  font-family: 'Roboto';
   line-height: 1.35;
+  color: $black;
 }
 
-h1,
-h2 {
+h1 {
   font-size: 3rem;
+  letter-spacing: -1.5;
+}
+
+h2 {
+  font-size: 1.875rem;
+  letter-spacing: -.5;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: .25;
+}
+
+.img-fluid {
+  width: 100%;
 }

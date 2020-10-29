@@ -1,0 +1,27 @@
+@import '~src/variables';
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    flex-wrap: wrap;
+  }
+
+  li {
+    display: block;
+    padding: 0 $global-padding $global-padding  0;
+    cursor: pointer;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.selected {
+  font-weight: bold;
+  color: #000;
+  text-decoration: underline;
+}

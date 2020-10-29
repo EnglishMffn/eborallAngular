@@ -7,13 +7,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // ROUTING
-// import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 // SERVICES
 // Contentful Import
 import { ContentfulService } from './contentful.service';
-import { MainWidthService } from './main-width.service';
 
 // Markdown
 import { MarkdownModule } from 'ngx-markdown';
@@ -24,6 +22,10 @@ import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.co
 import { HomePageComponent } from './home-page/home-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { ButtonComponent } from './button/button.component';
+import { PageFooterComponent } from './page-footer/page-footer.component';
+import { ProjectfilterPipe } from './projectfilter.pipe';
+import { FilterlistComponent } from './filterlist/filterlist.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -40,16 +42,21 @@ const routes: Routes = [
     HomePageComponent,
     ContactPageComponent,
     NavigationComponent,
+    ButtonComponent,
+    PageFooterComponent,
+    ProjectfilterPipe,
+    FilterlistComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+    }),
     MarkdownModule.forRoot(),
   ],
   providers: [
     ContentfulService,
-    MainWidthService
   ],
   bootstrap: [
     AppComponent

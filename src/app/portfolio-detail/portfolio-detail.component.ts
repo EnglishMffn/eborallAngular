@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from '../contentful.service';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Entry } from 'contentful';
-import { MainWidthService } from '../main-width.service';
+import { Title } from '@angular/platform-browser';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class PortfolioDetailComponent implements OnInit {
   constructor(
     private ContentfulS: ContentfulService,
     private route: ActivatedRoute,
-    private mainWidth: MainWidthService
+    private titleService: Title,
   ) {}
 
   ngOnInit() {
@@ -27,9 +28,7 @@ export class PortfolioDetailComponent implements OnInit {
           this.ContentfulS.getProject(params.get('slug'))
         )
       )
-      .subscribe(project => (this.project = project));
-
-    this.mainWidth.updateWidth(6);
+      .subscribe(project => (this.project = project, this.titleService.setTitle(project.fields.projectName + ' | EBORALL')));
   }
 
 }

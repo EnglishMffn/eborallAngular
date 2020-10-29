@@ -1,34 +1,78 @@
+@import '~src/variables';
+@import '~src/styles/grid/breakpoints';
+
+// Project List Components
 .project {
-  background: #efefef;
-  border-radius: 5px;
   display: block;
-  padding: 30px;
   margin-bottom: 15px;
+  text-decoration: none;
+
+  &:hover {
+    & > img {
+      box-shadow: 0 0 30px rgba($black, .12);
+      transform: scale(1.05);
+    }
+  }
+
+  &:active {
+    & > img {
+      box-shadow: 0 0 30px rgba($black, .3);
+    }
+  }
 
   img {
     margin-bottom: 15px;
+    overflow: hidden;
+    transition: .25s ease;
+    width: 100%;
+  }
+
+  .project-details {
+    height: 75px;
+    padding-right: 18px;
   }
 
   h2 {
     font-size: 18px;
     line-height: 18px;
+    color: $black;
+    margin: 0;
+
+    span {
+      font-size: 60%;
+      color: $gray;
+      font-weight: normal;
+      align-self: middle;
+    }
   }
 
   li {
     list-style: none;
   }
 
+  // Hide description
   strong {
-    display: none;
+
     line-height: 18px;
+    font-weight: normal;
+    color: $gray;
   }
 
-  &:hover h2 {
-    display: none;
-  }
+  @include media-breakpoint-up(md) {
+    strong {
+      display: none;
+    }
 
-  &:hover strong {
-    display: block;
+    // On hover, hide h2 show strong
+    &:hover {
+      h2 {
+        display: none;
+      }
+
+      strong {
+        display: block;
+      }
+    }
   }
 
 }
