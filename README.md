@@ -1,6 +1,5 @@
-# Testing
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+# Eborall Portfolio Site
+My portfolio website built on Contentful and Angular. Feel free to look around and see how I work.
 
 ## Development server
 
