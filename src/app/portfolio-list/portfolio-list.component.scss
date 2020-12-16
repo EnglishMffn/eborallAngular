@@ -25,6 +25,9 @@
     overflow: hidden;
     transition: .25s ease;
     width: 100%;
+    min-height: 200px;
+    min-width: 350px;
+    background: $gray;
     @include image-border;
   }
 
