@@ -13,6 +13,8 @@ nav {
     display: block;
     padding: 0 $global-padding $global-padding  0;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.03rem;
 
     &:hover {
       font-weight: bold;
