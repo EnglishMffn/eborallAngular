@@ -15,11 +15,10 @@ nav {
   a {
     color: $light-gray;
     font-weight: normal;
-    font-size: 16px;
+    font-size: $global-font-size;
     transition: all 150ms ease;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
 
     &:hover {
       color: $black;
@@ -70,11 +69,13 @@ nav {
 @include media-breakpoint-down(xs) {
   .logo {
     img {
-      height: 50px;
+      height: 45px;
     }
   }
 
   nav {
+    padding: 15px 0;
+
     ul {
       padding-left: 0;
       width: 100%;
@@ -82,47 +83,10 @@ nav {
 
     li {
       padding: 0;
+
+      a {
+        font-size: 14px;
+      }
     }
   }
 }
-
-// // Mobile Styling
-// @media (max-width: 800px) {
-//   nav {
-
-//     .toggle {
-//       display: block;
-//     }
-
-//     ul {
-//       display: none;
-//       flex-direction: column;
-//       flex-basis: 100%;
-//       flex-grow: 1;
-//       width: 100%;
-//       background: #000;
-//       box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-//       padding: 15px !important;
-//       z-index: 3000;
-//       margin-top: 10px;
-//       border-radius: 25px;
-//     }
-
-//     li {
-//       margin: 8px 0;
-
-//       a {
-//         display: block;
-
-//         &:hover {
-//           color: #000;
-//         }
-//       }
-//     }
-
-//   }
-
-//   .active {
-//     display: flex;
-//   }
-// }

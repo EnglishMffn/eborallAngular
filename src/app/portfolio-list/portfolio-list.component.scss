@@ -4,7 +4,7 @@
 // Project List Components
 .project {
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: $global-margin;
   text-decoration: none;
 
   &:hover {
@@ -25,8 +25,8 @@
     overflow: hidden;
     transition: .25s ease;
     width: 100%;
-    min-height: 200px;
-    min-width: 350px;
+    min-height: 150px;
+    min-width: 300px;
     background: $gray;
     @include image-border;
   }
@@ -38,9 +38,9 @@
 
   h2 {
     font-size: 18px;
-    line-height: 18px;
-    color: $black;
+    line-height: line-height(18px);
     margin: 0;
+    color: $black;
 
     span {
       font-size: 60%;
@@ -56,8 +56,7 @@
 
   // Hide description
   strong {
-
-    line-height: 18px;
+    line-height: line-height(18px);
     font-weight: normal;
     color: $gray;
   }
@@ -78,5 +77,14 @@
       }
     }
   }
+}
 
+@include media-breakpoint-down(sm) {
+  .project {
+    margin-bottom: $global-margin * 2;
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
 }

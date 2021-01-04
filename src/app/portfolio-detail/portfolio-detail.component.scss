@@ -8,6 +8,7 @@
 
   .headline {
     font-size: 34px;
+    margin: margin-bottom(34px) 0;
   }
 }
 
@@ -62,7 +63,7 @@ dl {
   }
 
   article {
-    margin-top: -80px;
+    margin-top: -75px;
   }
 
 }
@@ -72,8 +73,8 @@ dl {
     display: block;
     margin-bottom: $global-margin;
 
-    h1 {
-      margin-bottom: $global-margin / 2;
+    .headline {
+      margin: $global-margin / 2 0;
     }
   }
 

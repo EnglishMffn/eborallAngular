@@ -5,8 +5,7 @@
 // Import Bootstrap Grid Only and Fonts
 @import
 '../src/styles/grid/bootstrap-grid',
-'../src/styles/fonts',
-'../src/styles/grid/breakpoints';
+'../src/styles/fonts';
 
 body {
   margin: 0;
@@ -25,24 +24,21 @@ body {
 
 // Font Styling
 html {
-  font-size: 15px;
+  font-size: $global-font-size;
   font-family: 'Roboto Mono';
-  line-height: 1.35;
-  letter-spacing: .5;
-  color: #575865;
+  line-height: line-height($global-font-size);
+  color: $body-gray;
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-// // Larger Font for XL screens
-// @media (min-width: 1600px) {
-//   html {
-//     font-size: 12px;
-//     line-height: 1.35;
-//   }
-// }
+p,
+main nav {
+  margin: $global-font-size * 1.25 0;
+}
+
 
 a {
   color: $black;
@@ -52,6 +48,12 @@ a {
   }
 }
 
+// Heading Sizes
+$h1: 96px;
+$h2: 60px;
+$h3: 48px;
+$h4: 34px;
+
 //Heading Sizes
 h1,
 h2,
@@ -59,33 +61,54 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Roboto Mono';
-  line-height: 1.35;
   color: $black;
+  font-family: 'Roboto Mono';
   text-transform: uppercase;
-  letter-spacing: 0.03rem;
+  letter-spacing: .03rem;
+  line-height: .95;
 }
 
 h1 {
-  font-size: 3rem;
-  letter-spacing: -1.5;
+  font-size: $h1;
+  letter-spacing: -1.5px;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
-  font-size: 1.875rem;
-  letter-spacing: -.5;
+  font-size: $h2;
+  letter-spacing: -.5px;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: $h3;
   letter-spacing: 0;
 }
 
 h4 {
-  font-size: 1rem;
-  letter-spacing: .25;
+  font-size: $h4;
+  letter-spacing: .25px;
 }
 
 .img-fluid {
   width: 100%;
+}
+
+
+@include media-breakpoint-down(sm) {
+  h1 {
+    font-size: $h1 / 1.618;
+  }
+
+  h2 {
+    font-size: $h2 / 1.618;
+  }
+
+  h3 {
+    font-size: $h3 / 1.618;
+  }
+
+  h4 {
+    font-size: $h4 / 1.618;
+  }
 }

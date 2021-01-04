@@ -1,3 +1,4 @@
+<h1>My Work</h1>
 <app-filter-list [PostData]="processFilters(projects)" (newItemEvent)="updateFilter($event)"></app-filter-list>
 <div class="row" [@photosAnimation]="projects.length">
   <div class="col-sm-12 col-md-4 h-100" *ngFor="let project of projects|projectfilter:SearchFilter" >
@@ -10,4 +11,8 @@
     </a>
     </div>
 </div>
-<app-button btnStyle="full-width" cta="Contact Me" link="../contact"></app-button>
+<div class="row">
+  <div class="col-sm-12">
+    <app-button btnStyle="full-width" cta="Contact Me" link="../contact"></app-button>
+  </div>
+</div>

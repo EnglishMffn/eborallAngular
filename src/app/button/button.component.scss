@@ -9,6 +9,7 @@
   padding: 20px 30px;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
 
   &:hover {
     background: darken($brand-primary, 5);
@@ -29,6 +30,14 @@
 
     &:active {
       background: medium-emphasis($black);
+    }
+  }
+
+  &.black {
+    background: $black;
+
+    &:hover {
+      background: $brand-primary;
     }
   }
 

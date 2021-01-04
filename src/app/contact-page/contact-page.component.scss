@@ -1,0 +1,28 @@
+@import '../../variables';
+
+input, textarea {
+  padding: 12px 16px 14px;
+  -webkit-font-smoothing: antialiased;
+  font-size: 1rem;
+  letter-spacing: .009375em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  align-self: flex-end;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: opacity 150ms cubic-bezier(.4, 0, .2, 1) 0s;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid;
+  margin-bottom: $global-margin;
+  display: flex;
+
+
+  &:focus-within {
+    border-width: 5px;
+    font-weight: bold;
+    outline: solid $black;
+  }
+}

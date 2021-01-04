@@ -1,29 +1,28 @@
 <h1>Contact</h1>
-<p class="lede">Every project is unique. Tell me a bit about yours and see how much time and energy I can save you.
-</p>
-<form autocomplete="on" class="uk-grid-small" uk-grid method="post"
-  action="https://formspree.io/josepheborall@gmail.com">
-  <div class="uk-inline uk-width-1-2@l">
-    <span class="uk-form-icon" uk-icon="icon: user"></span>
-    <input class="uk-input" type="text" name="name" placeholder="Name">
+<p>Every project is unique. Tell me a bit about yours and see how much time and energy I can save you.</p>
+<form autocomplete="on" method="post" action="https://formspree.io/josepheborall@gmail.com">
+  <div class="row">
+    <div class="col-lg-6"><input type="text" name="name" placeholder="Name"></div>
+    <div class="col-lg-6"><input type="phone" name="phone-number" placeholder="(XXX) XXX-XXXX"></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <input type="email" name="email" placeholder="Email Address">
+    </div>
   </div>
 
-  <div class="uk-inline uk-width-1-2@l">
-    <span class="uk-form-icon" uk-icon="icon: receiver"></span>
-    <input class="uk-input" type="phone" name="phone-number" placeholder="(XXX) XXX-XXXX">
+  <div class="row">
+    <div class="col-lg-12">
+      <textarea name="message" type="text" style="min-width: 100%; min-height: 150px;" placeholder="Message..."></textarea>
+    </div>
   </div>
-  <div class="uk-inline uk-width-1-1">
-    <span class="uk-form-icon" uk-icon="icon: mail"></span>
-    <input class="uk-input" type="email" name="email" placeholder="Email Address">
+
+  <div class="row">
+    <div class="col-lg-12">
+      <app-button cta='Submit' link="work" btnStyle="black" type="submit"></app-button>
+    </div>
   </div>
-  <div class="uk-width-1-1">
-    <textarea class="uk-textarea" name="message" type="text"
-      style="border-radius: 25px; padding: 25px; min-width: 100%; min-height: 150px;"
-      placeholder="Message..."></textarea>
-  </div>
-  <div class="uk-width-1-1">
-    <button class="uk-button uk-button-primary pill-button uk-width-1-1" uk-icon="chevron-right"
-      type="submit">Submit</button>
-  </div>
+
 </form>
+
 

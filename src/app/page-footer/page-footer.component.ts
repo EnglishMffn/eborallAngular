@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageFooterComponent implements OnInit {
 
+  copyrightYear(){
+    const d = new Date();
+    const year = d.getFullYear();
+
+    return year;
+  }
+
   constructor() { }
 
   ngOnInit() {
