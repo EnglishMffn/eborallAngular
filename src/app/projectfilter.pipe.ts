@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+// A pipe for filtering projects on the project page
 @Pipe({
   name: 'projectfilter'
 })
