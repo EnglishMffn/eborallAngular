@@ -18,7 +18,7 @@ input, textarea {
   border-bottom: 1px solid;
   margin-bottom: $global-margin;
   display: flex;
-
+  border-radius: 0;
 
   &:focus-within {
     border-width: 5px;

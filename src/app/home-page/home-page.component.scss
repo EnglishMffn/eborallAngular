@@ -1,6 +1,12 @@
 @import '~src/styles/grid/breakpoints';
 @import '~src/variables';
 
+.hero-wrap {
+  display: flex;
+  height: 50vh;
+  vertical-align: middle;
+}
+
 @include media-breakpoint-up(sm) {
   .hero {
     max-width: 780px;
