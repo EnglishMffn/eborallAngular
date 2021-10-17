@@ -26,12 +26,14 @@ import { ButtonComponent } from './button/button.component';
 import { PageFooterComponent } from './page-footer/page-footer.component';
 import { ProjectfilterPipe } from './projectfilter.pipe';
 import { FilterListComponent } from './filter-list/filter-list.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'work', component: PortfolioListComponent },
   { path: 'work/:slug', component: PortfolioDetailComponent },
-  { path: 'contact', component: ContactPageComponent }
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
 ];
 
 @NgModule({
@@ -46,6 +48,7 @@ const routes: Routes = [
     PageFooterComponent,
     ProjectfilterPipe,
     FilterListComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
