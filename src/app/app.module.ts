@@ -27,6 +27,7 @@ import { PageFooterComponent } from './page-footer/page-footer.component';
 import { ProjectfilterPipe } from './projectfilter.pipe';
 import { FilterListComponent } from './filter-list/filter-list.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { YoutubeVideoEmbedComponent } from './youtube-video-embed/youtube-video-embed.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
@@ -49,6 +50,7 @@ const routes: Routes = [
     ProjectfilterPipe,
     FilterListComponent,
     PrivacyPolicyComponent,
+    YoutubeVideoEmbedComponent
   ],
   imports: [
     BrowserModule,

@@ -7,12 +7,11 @@
         <h1 class="headline">{{project.fields.projectName}}</h1>
         <div class="summary">{{project.fields.summary}}</div>
       </div>
-
       <a *ngIf="project.fields.mainMedia" href="{{project.fields.mainMedia.fields.file.url}}"><img src="https://{{project.fields.mainMedia.fields.file.url}}?&fm=jpg&fl=progressive&w=1180&h=750" alt="{{project.fields.projectThumb.fields.description}}" class="img-fluid" /></a>
     </section>
 
     <section *ngIf="project.fields.caseStudyLink" class="col-12" style="padding: 15px;">
-        <app-button btnStyle="full-width" cta="Case Study PDF" link="{{project.fields.caseStudyLink.fields.file.url}}"></app-button>
+        <a class="button full-width" href="{{project.fields.caseStudyLink.fields.file.url}}" target="_pdf">View Case Study PDF</a>
     </section>
 
     <section class="row col-12">
