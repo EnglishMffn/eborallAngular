@@ -8,7 +8,7 @@
         <div class="summary">{{project.fields.summary}}</div>
       </div>
 
-      <a *ngIf="project.fields.mainMedia" href="{{project.fields.mainMedia.fields.file.url}}"><img src="{{project.fields.mainMedia.fields.file.url}}?&fm=jpg&fl=progressive&w=1180&h=750" alt="{{project.fields.projectThumb.fields.description}}" class="img-fluid" /></a>
+      <a *ngIf="project.fields.mainMedia" href="{{project.fields.mainMedia.fields.file.url}}"><img src="https://{{project.fields.mainMedia.fields.file.url}}?&fm=jpg&fl=progressive&w=1180&h=750" alt="{{project.fields.projectThumb.fields.description}}" class="img-fluid" /></a>
     </section>
 
     <section *ngIf="project.fields.caseStudyLink" class="col-12" style="padding: 15px;">
